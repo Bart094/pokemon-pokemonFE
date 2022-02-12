@@ -1,5 +1,5 @@
 .App-logo {
-  height: 100px;
+  height: calc(50px + 2vmin);
 }
 
 .App-header {
@@ -30,6 +30,10 @@
 .App-button {
   height: 50px;
   vertical-align: middle;
+}
+
+.loader{
+  margin-bottom: 15px;
 }
 
 *:focus {

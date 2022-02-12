@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Favourites/> should pass shallow snapshot test 1`] = `
+<div
+  className="App-header"
+>
+  <div>
+    <img
+      alt="logo-truelayer"
+      className="App-logo"
+      data-testid="logo"
+      src="truelayer_logo.svg"
+    />
+    <form
+      action="#"
+      onSubmit={[Function]}
+    >
+      <input
+        className="App-input"
+        data-testid="input-text"
+        name="name"
+        onChange={[Function]}
+        placeholder="Insert Pokemon Name"
+        type="text"
+      />
+      <input
+        alt="poke-ball"
+        className="App-button"
+        data-testid="input-button"
+        disabled={true}
+        src="ball_icon.png"
+        type="image"
+      />
+    </form>
+    <button
+      className="App-input"
+      onClick={[Function]}
+      type="button"
+    >
+      List Of Favourites
+    </button>
+  </div>
+</div>
+`;
+
+exports[`renders <Favourites/> should pass shallow snapshot test 2`] = `
+<div
+  className="App-header"
+>
+  <Favourites />
+  <button
+    autoFocus={true}
+    className="App-input"
+    onClick={[Function]}
+    type="submit"
+  >
+    Back
+  </button>
+</div>
+`;
+
+exports[`search Pokemon should pass shallow snapshot test 1`] = `
+<div
+  className="App-header"
+>
+  <div>
+    <img
+      alt="logo-truelayer"
+      className="App-logo"
+      data-testid="logo"
+      src="truelayer_logo.svg"
+    />
+    <form
+      action="#"
+      onSubmit={[Function]}
+    >
+      <input
+        className="App-input"
+        data-testid="input-text"
+        name="name"
+        onChange={[Function]}
+        placeholder="Insert Pokemon Name"
+        type="text"
+      />
+      <input
+        alt="poke-ball"
+        className="App-button"
+        data-testid="input-button"
+        disabled={true}
+        src="ball_icon.png"
+        type="image"
+      />
+    </form>
+    <button
+      className="App-input"
+      onClick={[Function]}
+      type="button"
+    >
+      List Of Favourites
+    </button>
+  </div>
+</div>
+`;

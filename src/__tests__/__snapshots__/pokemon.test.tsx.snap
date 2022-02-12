@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useEffect() should return pokemon info 1`] = `
+<div
+  className="loader"
+  data-testid="loader"
+>
+  <TailSpin
+    color="rgb(247, 171, 27)"
+  />
+</div>
+`;
+
+exports[`useEffect() should return pokemon info 2`] = `
+<div
+  className="loader"
+  data-testid="loader"
+>
+  <TailSpin
+    color="rgb(247, 171, 27)"
+  />
+</div>
+`;
+
+exports[`useEffect() should return translation info 1`] = `
+<div
+  className="loader"
+  data-testid="loader"
+>
+  <TailSpin
+    color="rgb(247, 171, 27)"
+  />
+</div>
+`;
+
+exports[`useEffect() should return translation info 2`] = `
+<div
+  className="loader"
+  data-testid="loader"
+>
+  <TailSpin
+    color="rgb(247, 171, 27)"
+  />
+</div>
+`;

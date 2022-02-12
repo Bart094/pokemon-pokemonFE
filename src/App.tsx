@@ -1,7 +1,7 @@
 import "./App.css";
-import React from "react";
-import Pokemon from "./pokemon";
-import Favourites from "./favourites";
+import React, { BaseSyntheticEvent, FormEvent } from "react";
+import Pokemon from "./components/pokemon";
+import Favourites from "./components/favourites";
 
 export default function App() {
   const [showPokemon, setShowPokemon] = React.useState<boolean>(false);
@@ -11,13 +11,12 @@ export default function App() {
 
   function handleSubmit(event: any) {
     event.preventDefault();
-    setPokemonName(event.target[0].value);
+    setPokemonName(event.currentTarget[0].value);
     setShowPokemon(true);
   }
 
   function handleChange(input: any) {
-    setPokemonName(input.currentTarget.value);
-    if (pokemonName.length > 0) {
+    if (input.currentTarget.value.length > 0) {
       setDisableButton(false);
     } else {
       setDisableButton(true);
@@ -26,11 +25,13 @@ export default function App() {
 
   return (
     <div className="App-header">
-      {showPokemon == false && showFavourites == false && (
+      {showPokemon === false && showFavourites === false && (
         <div>
           <img
             className="App-logo"
-            src="https://truelayer.com/static/f7ff55b4588b66f31ccc555a48bdf186/truelayer_logo_white_w167_h31.svg"
+            src={require('./images/truelayer_logo.svg').default}
+            alt="logo-truelayer"
+            data-testid="logo"
           ></img>
           <form action="#" onSubmit={handleSubmit}>
             <input
@@ -39,12 +40,15 @@ export default function App() {
               name="name"
               placeholder="Insert Pokemon Name"
               onChange={handleChange}
+              data-testid="input-text"
             />
             <input
               disabled={disableButton}
               className="App-button"
               type="image"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/512px-Pok%C3%A9_Ball_icon.svg.png"
+              src={require('./images/ball_icon.png')}
+              alt="poke-ball"
+              data-testid="input-button"
             />
           </form>
           <button
@@ -63,7 +67,6 @@ export default function App() {
           className="App-input"
           type="submit"
           autoFocus={true}
-          onKeyPress={() => setShowPokemon(!showPokemon)}
           onClick={() => {
             if (showFavourites || showPokemon) {
               setShowPokemon(false);
